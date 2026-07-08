@@ -1,18 +1,36 @@
 header {
+  padding-left: 410; padding-right: 410;
   border: 1px solid red;
   background-color: black;
 }
-.menu01{
+.top-util{
   padding-left: 410; padding-right: 410;
+  font-size: 12px;
+  color: aliceblue;
+  display: flex;
+  justify-content: space-between;
+}
+.util-ul{
+  gap: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+.util02-ul{
+  gap: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+.menu01{ 
+
   display: flex;
   justify-content: center;
 
 }
 .menu01-ul{
-  gap: 60px;
   display: flex;
   color: aliceblue;
   align-items: center;
+  gap: 104px;
 }
 .logo-box{
   display: flex;
@@ -22,4 +40,7 @@ header {
   gap: 60px;
   display: flex;
   justify-content: flex-start;
+}
+.user-box-ul>li {
+  color: aliceblue;
 }
