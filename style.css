@@ -1,0 +1,25 @@
+header {
+  border: 1px solid red;
+  background-color: black;
+}
+.menu01{
+  padding-left: 410; padding-right: 410;
+  display: flex;
+  justify-content: center;
+
+}
+.menu01-ul{
+  gap: 60px;
+  display: flex;
+  color: aliceblue;
+  align-items: center;
+}
+.logo-box{
+  display: flex;
+  align-items: center;
+}
+.user-box-ul{
+  gap: 60px;
+  display: flex;
+  justify-content: flex-start;
+}
