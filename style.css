@@ -1,9 +1,10 @@
 header {
-  padding-left: 410; padding-right: 410;
   border: 1px solid red;
+  padding-left: 410; padding-right: 410;
   background-color: black;
 }
 .top-util{
+  border: 1px solid red;
   padding-left: 410; padding-right: 410;
   font-size: 12px;
   color: aliceblue;
@@ -11,36 +12,43 @@ header {
   justify-content: space-between;
 }
 .util-ul{
+  border: 1px solid red;
   gap: 20px;
   display: flex;
   justify-content: flex-start;
 }
 .util02-ul{
+  border: 1px solid red;
   gap: 20px;
   display: flex;
   justify-content: flex-end;
 }
-.menu01{ 
-
+.menu01{
+  border: 1px solid red;
   display: flex;
   justify-content: center;
 
 }
 .menu01-ul{
+  border: 1px solid rgb(255, 134, 134);
   display: flex;
   color: aliceblue;
   align-items: center;
   gap: 104px;
 }
 .logo-box{
+  border: 1px solid red;
+  padding-left: 60px;
   display: flex;
   align-items: center;
 }
 .user-box-ul{
+  border: 1px solid red;
   gap: 60px;
   display: flex;
   justify-content: flex-start;
 }
 .user-box-ul>li {
+  border: 1px solid red;
   color: aliceblue;
 }
