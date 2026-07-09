@@ -3,6 +3,17 @@ header {
   padding-left: 410; padding-right: 410;
   background-color: black;
 }
+/* 팝업 */
+.popup-img{
+  border: 1px solid red;
+  /* 색절대 바꾸지 말기 */
+  background-color: rgb(48, 41, 34);
+}
+.popup-img>a{
+  border: 1px solid red;
+display: flex;
+justify-content: center;
+}
 .top-util{
   border: 1px solid red;
   padding-left: 410; padding-right: 410;
@@ -42,13 +53,13 @@ header {
   display: flex;
   align-items: center;
 }
-.user-box-ul{
+.event-box-ul{
   border: 1px solid red;
   gap: 60px;
   display: flex;
   justify-content: flex-start;
 }
-.user-box-ul>li {
+.event-box-ul>li {
   border: 1px solid red;
   color: aliceblue;
 }
