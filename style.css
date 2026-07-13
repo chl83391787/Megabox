@@ -19,8 +19,18 @@ header {
   background-color: black;
 
 }
+main{
+  background-color: black;
+  height: 2000px;width: 100%;
+  color: #ececec;
+}
+footer{
+  background-color: black;
+  color: #ececec;
+}
 .top-bar{
   background-color: black;
+  border-bottom: 1px solid #ececec;
 }
 /* 팝업 */
 .popup-img{
