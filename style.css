@@ -19,6 +19,9 @@ header {
   background-color: black;
 
 }
+.top-bar{
+  background-color: black;
+}
 /* 팝업 */
 .popup-img{
   border: 1px solid red;
@@ -31,13 +34,14 @@ display: flex;
 justify-content: center;
 }
 .top-util{
+  width: 1100px;
   border: 1px solid red;
   padding-left: 410px; padding-right: 410px;
   font-size: 12px;
   color: aliceblue;
-
   display: flex;
   justify-content: space-between;
+
 }
 .util-ul{
   border: 1px solid red;
