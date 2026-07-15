@@ -32,13 +32,16 @@ footer{
   background-color: black;
   border-bottom: 1px solid #ececec;
 }
+
 /* 팝업 */
 .popup-img{
   border: 1px solid red;
+  display: flex;
+  justify-content: center;
   /* 색절대 바꾸지 말기 */
   background-color: rgb(48, 41, 34);
 }
-.popup-img>a{
+.popup-img1>a{
   border: 1px solid red;
 display: flex;
 justify-content: center;
