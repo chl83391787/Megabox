@@ -54,8 +54,8 @@ justify-content: center;
   color: aliceblue;
   display: flex;
   justify-content: space-between;
-
 }
+
 .util-ul{
   border: 1px solid red;
   gap: 20px;
@@ -71,6 +71,7 @@ justify-content: center;
 .menu01{
   border: 1px solid red;
   display: flex;
+  flex: 1;
   justify-content: center;
 
 }
@@ -82,6 +83,7 @@ justify-content: center;
   gap: 104px;
 }
 .logo-box{
+  transform: translateY(-30%);
   border: 1px solid #ff0000;
   padding-left: 60px; padding-right: 60px;
   display: flex;
