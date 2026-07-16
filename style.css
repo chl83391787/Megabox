@@ -1,8 +1,7 @@
 제미나이가 알려준 질감 넣는 방법 굿
-/* body {
-    1. 기본 바탕이 되는 어두운 배경색 지정
+body {
+
     background-color: #16161a;
-    2. 미세한 가로줄 무늬 패턴 생성
     background-image: repeating-linear-gradient(
         to bottom,
         transparent,
@@ -10,13 +9,13 @@
         rgba(255, 255, 255, 0.03) 2px,  흰색 선에 투명도를 아주 낮게 주어 은은하게 표현
         rgba(255, 255, 255, 0.03) 3px
     );
-} */
+}
 
 header {
   border: 1px solid red;
   padding-top: 0; padding-bottom: 0;
   padding-left: 410; padding-right: 410;
-background-color: ;
+  background-color: ;
 }
 main{
   background-color: black;
