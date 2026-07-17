@@ -1,80 +1,58 @@
-제미나이가 알려준 질감 넣는 방법 굿
-body {
-
-    background-color: #16161a;
-    background-image: repeating-linear-gradient(
-        to bottom,
-        transparent,
-        transparent 2px,
-        rgba(255, 255, 255, 0.03) 2px,  흰색 선에 투명도를 아주 낮게 주어 은은하게 표현
-        rgba(255, 255, 255, 0.03) 3px
-    );
+/* 배너 */
+header{
+    /* border: 1px solid red ; */
+    background-color: black;
 }
-
-header {
-  border: 1px solid red;
-  padding-top: 0; padding-bottom: 0;
-  padding-left: 410; padding-right: 410;
-  background-color: ;
+/* 팝업 이미지 */
+.popup-banner{
+    background-color: black;
+    position: relative;
+    width: 100%;
+    margin: auto;
 }
-main{
-  background-color: black;
-  height: 2000px;width: 100%;
-  color: #ececec;
+/* 팝업 배너 이미지 */
+.popup-img>a{
+    display: flex;
+    justify-content: center;
 }
-footer{
-  background-color: black;
-  color: #ececec;
+.popup-button{
+position: absolute;
+bottom: 0px;       /* 하단에서 10px 위로 */
+right: 0px;        /* 오른쪽에서 10px 옆으로 */
+z-index: 10;
 }
+/* .popup-button a {
+  display: block;
+} */
 .top-bar{
-  background-color: black;
-  border-bottom: 1px solid #ececec;
+background-color: #000; /* 전체 배경색 */
+  padding: 10px 0;
 }
-
-/* 팝업 */
-.popup-img{
-  border: 1px solid red;
-  display: flex;
-  justify-content: center;
-  /* 색절대 바꾸지 말기 */
-  background-color: rgb(48, 41, 34);
-}
-.popup-img1>a{
-  border: 1px solid red;
-display: flex;
-justify-content: center;
-}
+/*유저박스1/2를 담고 있는 상자*/
 .top-util{
-  width: 1100px;
-  border: 1px solid red;
-  padding-left: 410px; padding-right: 410px;
-  font-size: 12px;
-  color: aliceblue;
-  display: flex;
-  justify-content: space-between;
+width: 1100px;
+margin: 0 auto;
+display: flex;
+justify-content: space-between;
+align-items: center;
+color: aliceblue;
 }
-
 .util-ul{
-  border: 1px solid red;
+  /* border: 1px solid red; */
   gap: 20px;
   display: flex;
-  justify-content: flex-start;
 }
 .util02-ul{
-  border: 1px solid red;
+  /* border: 1px solid red; */
   gap: 20px;
   display: flex;
-  justify-content: flex-end;
 }
 .menu01{
-  border: 1px solid red;
   display: flex;
   flex: 1;
   justify-content: center;
-
 }
 .menu01-ul{
-  border: 1px solid rgb(255, 134, 134);
   display: flex;
   color: aliceblue;
   align-items: center;
@@ -82,18 +60,19 @@ justify-content: center;
 }
 .logo-box{
   transform: translateY(-30%);
-  border: 1px solid #ff0000;
   padding-left: 60px; padding-right: 60px;
   display: flex;
   align-items: center;
 }
+.logo-box img{
+    width: auto;
+    height: 40px;
+    display: block;
+}
 .event-box-ul{
-  border: 1px solid red;
   gap: 60px;
   display: flex;
 }
 .event-box-ul>li {
-  border: 1px solid red;
   color: aliceblue;
-
 }
