@@ -5,7 +5,7 @@ header{
 }
 /* 팝업 이미지 */
 .popup-banner{
-    background-color: black;
+    background-color: rgb(44, 41, 41);
     position: relative;
     width: 100%;
     margin: auto;
@@ -57,6 +57,7 @@ color: aliceblue;
   color: aliceblue;
   align-items: center;
   gap: 104px;
+
 }
 .logo-box{
   transform: translateY(-30%);
