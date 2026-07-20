@@ -61,37 +61,27 @@ color: aliceblue;
 }
 /* 1. 기본적으로 서브 메뉴는 숨김 */
 .mene02 {
-    display: none; 
-    position: relative; /* 메인 메뉴 아래에 띄우기 위해 필요 */
-    top:100%;
-    left: 0;
-    width: 100vp;
-    background-color: #000;
-    z-index: 1000;
-    text-align: center;
-    padding: 20px 0;
+  display: none;
+  position: relative; /* 메인 메뉴 아래에 띄우기 위해 필요 */
+  top:100%;
+  left: 0;
+  width: 100vp;
+  background-color: #000;
+  z-index: 1000;
+  text-align: center;
+  padding: 20px 0;
 }
 
 /* 2. '영화' 메뉴에 마우스를 올리면 서브 메뉴가 나타남 */
 .m01-item03:hover .mene02 {
-    display: block;
-position: absolute;
-\
+  display: block;
+  position: absolute;
 }
 
 /* (선택 사항) 메뉴 위치 조정 */
 .m01-item03 {
-    position: relative; /* 자식 요소인 .mene02의 기준점이 됨 */
+  position: relative; /* 자식 요소인 .mene02의 기준점이 됨 */
 }
-
-
-
-
-
-
-
-
-
 .logo-box{
   transform: translateY(-30%);
   padding-left: 60px; padding-right: 60px;
@@ -99,9 +89,9 @@ position: absolute;
   align-items: center;
 }
 .logo-box img{
-    width: auto;
-    height: 40px;
-    display: block;
+  width: auto;
+  height: 40px;
+  display: block;
 }
 .event-box-ul{
   gap: 60px;
