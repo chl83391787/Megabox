@@ -74,11 +74,13 @@ color: aliceblue;
 
 /* 2. '영화' 메뉴에 마우스를 올리면 서브 메뉴가 나타남 */
 .m01-item03:hover .mene02 {
-  display: block;
   position: absolute;
+  display: block;
   justify-items: flex-start;
   width: 1920px;
   height: 50px;
+  top:100%;
+  right: 0;
 }
 
 /* (선택 사항) 메뉴 위치 조정 */
