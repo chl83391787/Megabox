@@ -76,11 +76,17 @@ color: aliceblue;
 .m01-item03:hover .mene02 {
   display: block;
   position: absolute;
+  width: 1920px;
+  height: 50px;
+  right: 100px;
 }
 
 /* (선택 사항) 메뉴 위치 조정 */
 .m01-item03 {
   position: relative; /* 자식 요소인 .mene02의 기준점이 됨 */
+}
+.mene02{
+display: none;
 }
 .logo-box{
   transform: translateY(-30%);
