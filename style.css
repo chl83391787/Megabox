@@ -76,9 +76,9 @@ color: aliceblue;
 .m01-item03:hover .mene02 {
   display: block;
   position: absolute;
+  justify-items: flex-start;
   width: 1920px;
   height: 50px;
-  right: 100px;
 }
 
 /* (선택 사항) 메뉴 위치 조정 */
