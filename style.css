@@ -1,3 +1,19 @@
+body{
+background-color: #141214;
+
+  background-image:
+    /* 가장자리가 살짝 어두워지는 입체적 비네팅 효과 */
+    radial-gradient(circle at center, rgba(35, 30, 35, 0.3) 0%, rgba(10, 8, 10, 0.7) 100%),
+
+    /* 촘촘한 가로 줄무늬 패턴 (2px 주기로 반복) */
+    repeating-linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2) 1px,
+      transparent 1px,
+      transparent 2px
+    );
+}
 /* 배너 */
 header{
     /* border: 1px solid red ; */
