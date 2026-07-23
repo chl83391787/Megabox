@@ -1,6 +1,8 @@
 body{
 background-color: #141214;
 
+
+
   background-image:
     /* 가장자리가 살짝 어두워지는 입체적 비네팅 효과 */
     radial-gradient(circle at center, rgba(35, 30, 35, 0.3) 0%, rgba(10, 8, 10, 0.7) 100%),
@@ -18,6 +20,9 @@ background-color: #141214;
 header{
     /* border: 1px solid red ; */
     background-color: black;
+}
+.top-util{
+  font-size: 12px;
 }
 /* 팝업 이미지 */
 .popup-banner{
@@ -40,9 +45,25 @@ z-index: 10;
 /* .popup-button a {
   display: block;
 } */
+
 .top-bar{
-background-color: #000; /* 전체 배경색 */
+  background-color: #000; /* 전체 배경색 */
   padding: 10px 0;
+
+  /* 1. 반투명한 어두운 기본 배경색 */
+  background-color: rgba(15, 15, 15, 0.85);
+
+  /* 2. 미세한 가로 줄무늬 패턴 생성 (스캔라인 효과) */
+  background-image: repeating-linear-gradient(
+    transparent,
+    transparent 2px,
+    rgba(0, 0, 0, 0.6) 2px,
+    rgba(0, 0, 0, 0.6) 4px
+  );
+  border-bottom: 1px  solid rgb(49, 49, 49);
+  /* 3. 뒷배경 이미지가 은은하게 비치도록 블러 처리 (선택 사항) */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 /*유저박스1/2를 담고 있는 상자*/
 .top-util{
@@ -88,6 +109,9 @@ color: aliceblue;
   padding: 20px 0;
 }
 
+.m01-item03, .m01-item04, .m01-item05 {
+  position: relative; /* 자식 요소인 .mene02의 기준점이 됨 */
+}
 /* 2. '영화' 메뉴에 마우스를 올리면 서브 메뉴가 나타남 */
 .m01-item03:hover .mene02 {
   position: absolute;
@@ -100,9 +124,6 @@ color: aliceblue;
 }
 
 /* (선택 사항) 메뉴 위치 조정 */
-.m01-item03 {
-  position: relative; /* 자식 요소인 .mene02의 기준점이 됨 */
-}
 .mene02{
 display: none;
 }
