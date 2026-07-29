@@ -1,13 +1,7 @@
-body{
-background-color: #141214;
-
-
-
+body {
+  background-color: #141214;
   background-image:
-    /* 가장자리가 살짝 어두워지는 입체적 비네팅 효과 */
     radial-gradient(circle at center, rgba(35, 30, 35, 0.3) 0%, rgba(10, 8, 10, 0.7) 100%),
-
-    /* 촘촘한 가로 줄무늬 패턴 (2px 주기로 반복) */
     repeating-linear-gradient(
       0deg,
       rgba(0, 0, 0, 0.2),
@@ -16,133 +10,164 @@ background-color: #141214;
       transparent 2px
     );
 }
-/* 배너 */
-header{
-    /* border: 1px solid red ; */
-    background-color: black;
+
+header {
+  background-color: black;
 }
-.top-util{
-  font-size: 12px;
-}
+
 /* 팝업 이미지 */
-.popup-banner{
-    background-color: rgb(44, 41, 41);
-    position: relative;
-    width: 100%;
-    margin: auto;
+.popup-banner {
+  background-color: rgb(44, 41, 41);
+  position: relative;
+  width: 100%;
+  margin: auto;
 }
-/* 팝업 배너 이미지 */
-.popup-img>a{
-    display: flex;
-    justify-content: center;
-}
-.popup-button{
-position: absolute;
-bottom: 0px;       /* 하단에서 10px 위로 */
-right: 0px;        /* 오른쪽에서 10px 옆으로 */
-z-index: 10;
-}
-/* .popup-button a {
-  display: block;
-} */
 
-.top-bar{
-  background-color: #000; /* 전체 배경색 */
-  padding: 10px 0;
+.popup-img > a {
+  display: flex;
+  justify-content: center;
+}
 
-  /* 1. 반투명한 어두운 기본 배경색 */
+.popup-button {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  z-index: 10;
+}
+
+/* 상단바 */
+.top-bar {
+  position: relative;
   background-color: rgba(15, 15, 15, 0.85);
-
-  /* 2. 미세한 가로 줄무늬 패턴 생성 (스캔라인 효과) */
+  padding: 10px 0;
   background-image: repeating-linear-gradient(
     transparent,
     transparent 2px,
     rgba(0, 0, 0, 0.6) 2px,
     rgba(0, 0, 0, 0.6) 4px
   );
-  border-bottom: 1px  solid rgb(49, 49, 49);
-  /* 3. 뒷배경 이미지가 은은하게 비치도록 블러 처리 (선택 사항) */
+  border-bottom: 1px solid rgb(49, 49, 49);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
 }
-/*유저박스1/2를 담고 있는 상자*/
-.top-util{
-width: 1100px;
-margin: 0 auto;
-display: flex;
-justify-content: space-between;
-align-items: center;
-color: aliceblue;
+
+.top-util {
+  width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: aliceblue;
+  font-size: 12px;
 }
-.util-ul{
-  /* border: 1px solid red; */
+
+.util-ul, .util02-ul {
   gap: 20px;
   display: flex;
 }
-.util02-ul{
-  /* border: 1px solid red; */
-  gap: 20px;
+
+/* 메인 메뉴 박스 */
+.menu01 {
   display: flex;
-}
-.menu01{
-  display: flex;
-  flex: 1;
   justify-content: center;
+  align-items: center;
+  margin-top: 15px;
 }
-.menu01-ul{
+
+.menu01-ul {
   display: flex;
   color: aliceblue;
   align-items: center;
-  gap: 104px;
-
-}
-/* 1. 기본적으로 서브 메뉴는 숨김 */
-.mene02 {
-  display: none;
-  position: relative; /* 메인 메뉴 아래에 띄우기 위해 필요 */
-  top:100%;
-  left: 0;
-  width: 100vp;
-  background-color: #000;
-  z-index: 1000;
-  text-align: center;
-  padding: 20px 0;
+  gap: 50px;
 }
 
-.m01-item03, .m01-item04, .m01-item05 {
-  position: relative; /* 자식 요소인 .mene02의 기준점이 됨 */
-}
-/* 2. '영화' 메뉴에 마우스를 올리면 서브 메뉴가 나타남 */
-.m01-item03:hover .mene02 {
-  position: absolute;
-  display: block;
-  justify-items: flex-start;
-  width: 1920px;
-  height: 50px;
-  top:100%;
-  right: 0;
+/* 아이콘 묶음 전용 스타일 (붙어있게 처리) */
+.icon-group {
+  display: flex;
+  align-items: center;
+  gap: 12px; /* 아이콘 사이의 간격 */
 }
 
-/* (선택 사항) 메뉴 위치 조정 */
-.mene02{
-display: none;
-}
-.logo-box{
-  transform: translateY(-30%);
-  padding-left: 60px; padding-right: 60px;
+.icon-group a {
   display: flex;
   align-items: center;
 }
-.logo-box img{
+
+/* 마우스 올렸을 때 전체 화면 배경 바 */
+.sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #171517;
+  border-top: 1px solid #2b2b2b;
+  border-bottom: 1px solid #333;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+}
+
+/* 서브메뉴 내부 영역 */
+.sub-menu-inner {
+  width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 45px;
+}
+
+.sub-menu .m02-nav {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+}
+
+.sub-menu .m02-nav a {
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.sub-menu .m02-nav a:hover {
+  color: #00b4d8;
+  text-decoration: underline;
+}
+
+/* 각 메뉴별 서브메뉴 시작 위치 정렬 */
+.m01-item03 .sub-menu-inner { padding-left: 130px; } /* 영화 */
+.m01-item04 .sub-menu-inner { padding-left: 205px; } /* 예매 */
+.m01-item05 .sub-menu-inner { padding-left: 280px; } /* 극장 */
+
+.event-li01 .sub-menu-inner { padding-left: 630px; } /* 이벤트 */
+.event-li03 .sub-menu-inner { padding-left: 760px; } /* 혜택 */
+
+/* 마우스 호버 시 서브메뉴 노출 */
+.m01-item:hover .sub-menu,
+.event-li:hover .sub-menu {
+  display: block;
+}
+
+/* 로고 박스 */
+.logo-box {
+  padding-left: 40px;
+  padding-right: 40px;
+  display: flex;
+  align-items: center;
+}
+
+.logo-box img {
   width: auto;
   height: 40px;
   display: block;
 }
-.event-box-ul{
-  gap: 60px;
+
+/* 이벤트 메뉴 */
+.event-box-ul {
+  gap: 40px;
   display: flex;
-}
-.event-box-ul>li {
-  color: aliceblue;
+  align-items: center;
 }
 
+.event-box-ul > li {
+  color: aliceblue;
+}
