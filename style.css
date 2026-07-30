@@ -171,3 +171,15 @@ header {
 .event-box-ul > li {
   color: aliceblue;
 }
+
+/* 영화 순위 */
+.movie-list{
+  display: flex;
+  justify-content: center;
+}
+.list{
+  display: flex;
+  justify-items: center;
+  gap: 40px;
+  color: #fff;
+}
