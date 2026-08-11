@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+    <title>MEET PLAY SHARE, 메가박스</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="common.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- 본문 바로가기 -->
+    <div class="skip" title="스킵 네비게이션">
+        <a href="#contents" title="본문 바로가기">본문 바로가기</a>
+        <a href="#footer" title="푸터 바로가기">푸터 바로가기</a>
+    </div>
+
+    <div class="body-wrap">
+
+        <!-- ==================== HEADER ==================== -->
+        <header id="header" class="main-header">
+            <!-- 상단 팝업 배너 -->
+            <div class="popup-banner" id="popupBanner">
+                <div class="popup-img">
+                    <a href="#" target="_blank">
+                        <img src="../image/Link → 메가박스_하우스_2026_D_PC일반배너_영화_짝사랑 세계2_1100x80(메인).svg" alt="짝사랑 세계2 메가박스 하우스 팝업 배너" />
+                    </a>
+                </div>
+                <div class="popup-button">
+                    <button type="button" id="closeBannerBtn" title="배너 닫기">
+                        <img src="../image/Button.svg" alt="닫기" />
+                    </button>
+                </div>
+            </div>
+
+            <!-- 중앙 로고 -->
+            <h1 class="ci">
+                <a href="/" title="MEGABOX 메인으로 가기">
+                    <img src="../image/MEGABOXLOGO.svg" alt="MEGABOX : Life Theater" />
+                </a>
+            </h1>
+
+            <!-- 상단 유저 툴바 (VIP LOUNGE, 멤버십, 고객센터 / 로그인, 회원가입, 빠른예매) -->
+            <div class="util-area">
+                <div class="left-link">
+                    <a href="#" title="VIP LOUNGE">VIP LOUNGE</a>
+                    <a href="#" title="멤버십">멤버십</a>
+                    <a href="#" title="고객센터">고객센터</a>
+                </div>
+
+                <div class="right-link">
+                    <div class="before">
+                        <a href="#" title="로그인" id="btnHeaderLogin">로그인</a>
+                        <a href="#" title="회원가입">회원가입</a>
+                    </div>
+                    <a href="#" class="quick-booking-btn" title="빠른예매">빠른예매</a>
+                </div>
+            </div>
+
+            <!-- 우측 Quick 링크 영역 (사이트맵, 검색, 상영시간표, 나의 메가박스) -->
+            <div class="link-area">
+                <a href="#layer_sitemap" class="btn-layer-sitemap" title="사이트맵" id="btnToggleSitemap">
+                    <img src="../image/line menu.svg" alt="사이트맵 아이콘" />
+                </a>
+                <a href="#layer_header_search" class="btn-layer-search" title="검색" id="btnToggleSearch">
+                    <img src="../image/reading glasses.svg" alt="검색 아이콘" />
+                </a>
+                <a href="#" class="link-ticket" title="상영시간표">상영시간표</a>
+                <a href="#" class="btn-layer-mymega" title="나의 메가박스">
+                    <img src="../image/person.svg" alt="나의 메가박스" />
+                </a>
+            </div>
+
+            <!-- GNB (메가박스 1뎁스 / 2뎁스 서브메뉴) -->
+            <nav id="gnb">
+                <ul class="gnb-depth1">
+                    <!-- 영화 -->
+                    <li>
+                        <a href="#" class="gnb-txt-movie" title="영화">영화</a>
+                        <div class="gnb-depth2">
+                            <ul>
+                                <li><a href="#" title="전체영화">전체영화</a></li>
+                                <li><a href="#" title="N스크린">N스크린</a></li>
+                                <li><a href="#" title="큐레이션">큐레이션</a></li>
+                                <li><a href="#" title="무비포스트">무비포스트</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 예매 -->
+                    <li>
+                        <a href="#" class="gnb-txt-reserve" title="예매">예매</a>
+                        <div class="gnb-depth2">
+                            <ul>
+                                <li><a href="#" title="빠른예매" class="quick-booking-btn">빠른예매</a></li>
+                                <li><a href="#" title="상영시간표">상영시간표</a></li>
+                                <li><a href="#" title="더 부티크 프라이빗 예매">더 부티크 프라이빗 예매</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 극장 -->
+                    <li>
+                        <a href="#" class="gnb-txt-theater" title="극장">극장</a>
+                        <div class="gnb-depth2">
+                            <ul>
+                                <li><a href="#" title="전체극장">전체극장</a></li>
+                                <li><a href="#" title="특별관">특별관</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 이벤트 -->
+                    <li>
+                        <a href="#" class="gnb-txt-event" title="이벤트">이벤트</a>
+                        <div class="gnb-depth2">
+                            <ul>
+                                <li><a href="#" title="진행중 이벤트">진행중 이벤트</a></li>
+                                <li><a href="#" title="지난 이벤트">지난 이벤트</a></li>
+                                <li><a href="#" title="당첨자발표">당첨자발표</a></li>
+                            </ul>
+                        </div>
+                    </li>
+
+                    <!-- 스토어 -->
+                    <li>
+                        <a href="#" class="gnb-txt-store" title="스토어">스토어</a>
+                    </li>
+
+                    <!-- 혜택 -->
+                    <li>
+                        <a href="#" class="gnb-txt-benefit" title="혜택">혜택</a>
+                        <div class="gnb-depth2">
+                            <ul>
+                                <li><a href="#" title="메가박스 멤버십">메가박스 멤버십</a></li>
+                                <li><a href="#" title="제휴/할인">제휴/할인</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </nav>
+
+            <!-- 사이트맵 펼침 레이어 -->
+            <div id="layer_sitemap" class="header-layer layer-sitemap">
+                <div class="wrap">
+                    <p class="tit">SITEMAP</p>
+                    <div class="sitemap-grid">
+                        <div class="list">
+                            <p class="tit-depth">영화</p>
+                            <ul class="list-depth">
+                                <li><a href="#">전체영화</a></li>
+                                <li><a href="#">큐레이션</a></li>
+                            </ul>
+                        </div>
+                        <div class="list">
+                            <p class="tit-depth">예매</p>
+                            <ul class="list-depth">
+                                <li><a href="#" class="quick-booking-btn">빠른예매</a></li>
+                                <li><a href="#">상영시간표</a></li>
+                                <li><a href="#">더 부티크 프라이빗 예매</a></li>
+                            </ul>
+                        </div>
+                        <div class="list">
+                            <p class="tit-depth">극장</p>
+                            <ul class="list-depth">
+                                <li><a href="#">전체극장</a></li>
+                                <li><a href="#">특별관</a></li>
+                            </ul>
+                        </div>
+                        <div class="list">
+                            <p class="tit-depth">이벤트</p>
+                            <ul class="list-depth">
+                                <li><a href="#">진행중 이벤트</a></li>
+                                <li><a href="#">당첨자발표</a></li>
+                            </ul>
+                        </div>
+                        <div class="list">
+                            <p class="tit-depth">스토어</p>
+                            <ul class="list-depth">
+                                <li><a href="#">새로운 상품</a></li>
+                                <li><a href="#">팝콘/음료/굿즈</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <button type="button" class="btn-close-sitemap" id="btnCloseSitemap">&times;</button>
+                </div>
+            </div>
+
+            <!-- 검색 펼침 레이어 -->
+            <div id="layer_header_search" class="header-layer layer-header-search">
+                <div class="wrap">
+                    <div class="search-box">
+                        <input type="text" placeholder="영화를 검색해 보세요." id="headerSearchInput" />
+                        <button type="button" class="btn-search-go">
+                            <img src="../image/reading glasses.svg" alt="검색" />
+                        </button>
+                    </div>
+                    <button type="button" class="btn-close-search" id="btnCloseSearch">&times;</button>
+                </div>
+            </div>
+        </header>
+        <!--// header -->
+
+        <!-- ==================== 로그인 모달 레이어 ==================== -->
+        <section id="layer_login_select" class="modal-layer">
+            <div class="wrap" style="width: 550px;">
+                <header class="layer-header">
+                    <h3 class="tit">로그인</h3>
+                </header>
+
+                <div class="tab-layer">
+                    <ul>
+                        <li class="login-tab-item on" data-target="login_tab_01"><a href="#">회원 로그인</a></li>
+                        <li class="login-tab-item" data-target="login_tab_02"><a href="#">비회원 로그인</a></li>
+                    </ul>
+                </div>
+
+                <div class="tab-cont-wrap">
+                    <!-- 회원 로그인 -->
+                    <div id="login_tab_01" class="login-tab-cont">
+                        <div style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px;">
+                            <input type="text" placeholder="아이디" class="input-text" />
+                            <input type="password" placeholder="비밀번호" class="input-text" />
+                            <button type="button" class="button purple large">로그인</button>
+                        </div>
+                    </div>
+
+                    <!-- 비회원 로그인 -->
+                    <div id="login_tab_02" class="login-tab-cont" style="display: none;">
+                        <div style="display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px;">
+                            <input type="text" placeholder="이름" class="input-text" />
+                            <input type="text" placeholder="생년월일 앞6자리" class="input-text" />
+                            <input type="text" placeholder="휴대폰번호 (-없이)" class="input-text" />
+                            <button type="button" class="button gblue large">비회원 예매확인</button>
+                        </div>
+                    </div>
+                </div>
+
+                <button type="button" class="btn-modal-close" id="btnCloseLogin">&times;</button>
+            </div>
+        </section>
+
+        <!-- ==================== 빠른 예매 모달 레이어 ==================== -->
+        <section id="layer_quick_booking" class="modal-layer">
+            <div class="wrap" style="width: 800px;">
+                <header class="layer-header">
+                    <h3 class="tit">⚡ MEGABOX 빠른예매</h3>
+                </header>
+
+                <div class="quick-booking-grid">
+                    <div class="qb-col qb-col-movie">
+                        <h4>1. 영화 선택</h4>
+                        <div class="qb-list">
+                            <div class="qb-item selected">호프 (HOPE)</div>
+                            <div class="qb-item">백룸 (Backrooms)</div>
+                            <div class="qb-item">군체</div>
+                            <div class="qb-item">토이 스토리 5</div>
+                            <div class="qb-item">모아나 2</div>
+                        </div>
+                    </div>
+
+                    <div class="qb-col qb-col-theater">
+                        <h4>2. 극장 선택</h4>
+                        <div class="qb-list">
+                            <div class="qb-item selected">강남</div>
+                            <div class="qb-item">코엑스</div>
+                            <div class="qb-item">성수</div>
+                            <div class="qb-item">홍대</div>
+                            <div class="qb-item">송도</div>
+                        </div>
+                    </div>
+
+                    <div class="qb-col qb-col-date">
+                        <h4>3. 날짜 선택</h4>
+                        <div class="qb-list">
+                            <div class="qb-item selected">08.11 (오늘)</div>
+                            <div class="qb-item">08.12 (내일)</div>
+                            <div class="qb-item">08.13 (목)</div>
+                            <div class="qb-item">08.14 (금)</div>
+                        </div>
+                    </div>
+
+                    <div class="qb-col qb-col-time">
+                        <h4>4. 시간 선택</h4>
+                        <div class="qb-list">
+                            <div class="qb-item selected">10:00 (2D)</div>
+                            <div class="qb-item">13:30 (DOLBY)</div>
+                            <div class="qb-item">16:45 (MX4D)</div>
+                            <div class="qb-item">19:50 (IMAX)</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="text-align: right;">
+                    <button type="button" class="button purple large" id="btnConfirmBooking" style="width: auto; padding: 12px 30px;">좌석선택 및 결제진행 &rarr;</button>
+                </div>
+
+                <button type="button" class="btn-modal-close" id="btnCloseQuickBooking">&times;</button>
+            </div>
+        </section>
+
+        <!-- ==================== MAIN CONTENTS ==================== -->
+        <div class="container main-container">
+            <div id="contents">
+                <div class="main-page">
+
+                    <!-- SECTION 01 : 박스오피스 메인 영화 -->
+                    <div id="main_section01" class="section main-movie">
+                        <div class="bg">
+                            <div class="bg-pattern"></div>
+                        </div>
+
+                        <div class="cont-area">
+                            <div class="tab-sorting">
+                                <button type="button" class="on" data-sort="boxoffice">박스오피스</button>
+                                <button type="button" data-sort="upcoming">상영예정작</button>
+                                <button type="button" data-sort="special">특별관</button>
+                            </div>
+
+                            <a href="#" class="more-movie" title="더 많은 영화보기">
+                                더 많은 영화보기 <i class="ico-plus">+</i>
+                            </a>
+
+                            <!-- 박스오피스 영화 카드 4선 -->
+                            <div class="main-movie-list">
+                                <ol class="list">
+                                    
+                                    <!-- 1위 영화 : 호프 -->
+                                    <li class="movie-item first">
+                                        <a href="#" class="movie-list-info" title="호프 상세 보기">
+                                            <p class="rank">1<span class="ir">위</span></p>
+                                            <div class="movie-grade_box">
+                                                <span class="age-badge age-15">15</span>
+                                            </div>
+                                            <div class="screen-type2">
+                                                <span>DOLBY</span>
+                                                <span>MX4D</span>
+                                            </div>
+                                            <img src="../image/hope.svg" alt="호프" class="poster" />
+                                            
+                                            <div class="wrap">
+                                                <div class="summary">
+                                                    인류 역사상 가장 위험한 외계 생명체와의 조우. 과연 인류의 미래는 어디로 향하는가? 크리스토퍼 놀란 감독의 신작.
+                                                </div>
+                                                <div class="score">
+                                                    <div class="preview">
+                                                        <p class="tit">관람평</p>
+                                                        <p class="number">9.8<span class="ir">점</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <div class="btn-util">
+                                            <button type="button" class="button btn-like">
+                                                <span class="heart-icon">♡</span> 2.4k
+                                            </button>
+                                            <div class="case">
+                                                <a href="#" class="button gblue quick-booking-btn" title="영화 예매하기">예매</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- 2위 영화 : 백룸 -->
+                                    <li class="movie-item">
+                                        <a href="#" class="movie-list-info" title="백룸 상세 보기">
+                                            <p class="rank">2<span class="ir">위</span></p>
+                                            <div class="movie-grade_box">
+                                                <span class="age-badge age-15">15</span>
+                                            </div>
+                                            <div class="screen-type2">
+                                                <span>ATMOS</span>
+                                            </div>
+                                            <img src="../image/Backrooms.svg" alt="백룸" class="poster" />
+
+                                            <div class="wrap">
+                                                <div class="summary">
+                                                    끝없는 노란 방, 웅웅거리는 형광등 소리. 이곳을 탈출할 수 있는 유일한 열쇠를 찾아라. 미로 같은 실시간 서바이벌.
+                                                </div>
+                                                <div class="score">
+                                                    <div class="preview">
+                                                        <p class="tit">관람평</p>
+                                                        <p class="number">9.5<span class="ir">점</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <div class="btn-util">
+                                            <button type="button" class="button btn-like">
+                                                <span class="heart-icon">♡</span> 1.8k
+                                            </button>
+                                            <div class="case">
+                                                <a href="#" class="button gblue quick-booking-btn" title="영화 예매하기">예매</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- 3위 영화 : 군체 -->
+                                    <li class="movie-item">
+                                        <a href="#" class="movie-list-info" title="군체 상세 보기">
+                                            <p class="rank">3<span class="ir">위</span></p>
+                                            <div class="movie-grade_box">
+                                                <span class="age-badge age-19">19</span>
+                                            </div>
+                                            <img src="../image/군체.svg" alt="군체" class="poster" />
+
+                                            <div class="wrap">
+                                                <div class="summary">
+                                                    지하 깊은 곳에서 깨어난 군집체. 통제 불능의 압도적 공포가 펼쳐진다. 충격적인 미스터리 SF 스릴러.
+                                                </div>
+                                                <div class="score">
+                                                    <div class="preview">
+                                                        <p class="tit">관람평</p>
+                                                        <p class="number">9.3<span class="ir">점</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <div class="btn-util">
+                                            <button type="button" class="button btn-like">
+                                                <span class="heart-icon">♡</span> 1.5k
+                                            </button>
+                                            <div class="case">
+                                                <a href="#" class="button gblue quick-booking-btn" title="영화 예매하기">예매</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                    <!-- 4위 영화 : 토이 스토리 5 -->
+                                    <li class="movie-item">
+                                        <a href="#" class="movie-list-info" title="토이 스토리 5 상세 보기">
+                                            <p class="rank">4<span class="ir">위</span></p>
+                                            <div class="movie-grade_box">
+                                                <span class="age-badge age-all">ALL</span>
+                                            </div>
+                                            <img src="../image/toy story.svg" alt="토이 스토리 5" class="poster" />
+
+                                            <div class="wrap">
+                                                <div class="summary">
+                                                    우디와 버즈의 새로운 모험! 전 세계가 사랑한 디즈니·픽사의 위대한 챕터. 스마트 장난감 시대에 맞선 토이들의 활약.
+                                                </div>
+                                                <div class="score">
+                                                    <div class="preview">
+                                                        <p class="tit">관람평</p>
+                                                        <p class="number">9.7<span class="ir">점</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                        <div class="btn-util">
+                                            <button type="button" class="button btn-like">
+                                                <span class="heart-icon">♡</span> 1.2k
+                                            </button>
+                                            <div class="case">
+                                                <a href="#" class="button gblue quick-booking-btn" title="영화 예매하기">예매</a>
+                                            </div>
+                                        </div>
+                                    </li>
+
+                                </ol>
+                            </div>
+
+                            <!-- 하단 빠른 검색 및 링크 바 -->
+                            <div class="search-link">
+                                <div class="cell">
+                                    <div class="search">
+                                        <input type="text" placeholder="영화명을 입력해 주세요" title="영화 검색" class="input-text" id="movieName" />
+                                        <button type="button" class="btn" id="btnSearchSubmit">검색</button>
+                                    </div>
+                                </div>
+                                <div class="cell"><a href="#" title="상영시간표 보기">📅 상영시간표</a></div>
+                                <div class="cell"><a href="#" title="박스오피스 보기">🎬 박스오피스</a></div>
+                                <div class="cell"><a href="#" title="빠른예매 보기" class="quick-booking-btn">⚡ 빠른예매</a></div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <!-- SECTION 02 : 혜택 및 이벤트 -->
+                    <div id="main_section02" class="section main-benefit">
+                        <div class="wrap">
+                            <div class="tit-util">
+                                <h2 class="tit">혜택</h2>
+                                <a href="#" class="btn-more-cross purple" title="혜택 더보기">더보기 +</a>
+                            </div>
+
+                            <div class="benefit-grid">
+                                <div class="benefit-card">
+                                    <img src="../image/Link → 메가박스_하우스_2026_D_PC일반배너_영화_짝사랑 세계2_1100x80(메인).svg" alt="혜택 1" />
+                                    <div class="info">
+                                        <span class="tag">시사회/무대인사</span>
+                                        <h4>[짝사랑 세계2] 메가박스 단독 프리미어 시사회 초청</h4>
+                                        <p class="date">2026.08.10 ~ 2026.08.20</p>
+                                    </div>
+                                </div>
+
+                                <div class="benefit-card">
+                                    <img src="../image/moana.svg" alt="모아나 2" />
+                                    <div class="info">
+                                        <span class="tag">메가픽</span>
+                                        <h4>[모아나 2] 오리지널 티켓 패키지 런칭</h4>
+                                        <p class="date">2026.08.12 ~ 소진 시까지</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 03 : 큐레이션 -->
+                    <div id="main_section03" class="section main-curation">
+                        <div class="wrap">
+                            <div class="tit-util">
+                                <h2 class="tit">큐레이션</h2>
+                                <a href="#" title="큐레이션 더보기">큐레이션 더보기 +</a>
+                            </div>
+
+                            <div class="curation-area">
+                                <div class="curr-img">
+                                    <p class="bage film">메가박스 필름소사이어티</p>
+                                    <div class="img">
+                                        <img src="../image/ies.svg" alt="큐레이션 추천작" />
+                                    </div>
+                                    <div class="info film">
+                                        <p class="txt">#필름소사이어티</p>
+                                        <p class="tit">어떻게 해야 했을까?</p>
+                                        <p class="summary">
+                                            "20년간 기록된, 사적인 가족의 초상"<br />
+                                            스물넷, 다정하던 누나에게 조현병 증상이 나타난다. 부모님은 병원 대신 자물쇠를 채운다.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- SECTION 04 : 메가박스 안내 -->
+                    <div id="main_section04" class="section main-info">
+                        <h2 class="tit">메가박스 특별관 안내</h2>
+                        
+                        <div class="special-cinema-list">
+                            <a href="#" class="special-item">DOLBY CINEMA</a>
+                            <a href="#" class="special-item">DOLBY VISION+ATMOS</a>
+                            <a href="#" class="special-item">MEGA | MX4D</a>
+                            <a href="#" class="special-item">BOUTIQUE PRIVATE</a>
+                            <a href="#" class="special-item">MEGA KIDS</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- 퀵 TOP 버튼 -->
+        <div class="quick-area">
+            <a href="#" class="btn-go-top" title="최상단으로 이동" id="btnGoTop">TOP</a>
+        </div>
+
+        <!-- FOOTER -->
+        <footer id="footer">
+            <div class="footer-top">
+                <div class="inner-wrap">
+                    <ul class="fnb">
+                        <li><a href="#">회사소개</a></li>
+                        <li><a href="#">인재채용</a></li>
+                        <li><a href="#">사회공헌</a></li>
+                        <li><a href="#">제휴/광고/부대사업문의</a></li>
+                        <li><a href="#">이용약관</a></li>
+                        <li class="privacy"><a href="#">위치기반서비스 이용약관</a></li>
+                        <li class="privacy"><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">윤리경영</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="inner-wrap">
+                    <div class="ci">MEGABOX : Life Theater</div>
+                    <div class="footer-info">
+                        <address>서울특별시 강남구 테헤란로 87길 22 도심공항터미널 건물 408호</address>
+                        <p>ARS 1544-0070 · 대표이메일 m.dreamcenter@partner.megabox.co.kr</p>
+                        <p>대표자명 홍정인, 남용석 · 개인정보보호책임자 김영호 · 사업자등록번호 211-86-59478</p>
+                        <p class="copy">COPYRIGHT &copy; MegaboxJoongAng, Inc. All rights reserved</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    <!-- 스크립트 연결 -->
+    <script src="main.js"></script>
+</body>
+</html>

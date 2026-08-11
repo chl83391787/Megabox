@@ -1,0 +1,880 @@
+/* ==========================================================================
+   MEGABOX Official Complete 1:1 Pixel-Perfect Replica Stylesheet (style.css)
+   ========================================================================== */
+
+:root {
+  --mb-bg-dark: #141214;
+  --mb-bg-header: #000000;
+  --mb-bg-card: #1f1b24;
+  --mb-bg-subnav: #19171f;
+  
+  --mb-purple: #351f67;
+  --mb-purple-light: #59bec9;
+  --mb-cyan: #00a2b8;
+  --mb-cyan-hover: #00b4d8;
+  
+  --mb-text-white: #ffffff;
+  --mb-text-lightgray: #cccccc;
+  --mb-text-gray: #aaaaaa;
+  --mb-text-darkgray: #666666;
+  
+  --mb-font: 'Noto Sans KR', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --mb-width: 1100px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--mb-bg-dark);
+  font-family: var(--mb-font);
+  color: var(--mb-text-white);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+.skip {
+  position: absolute;
+  top: -100px;
+  left: 0;
+  z-index: 10000;
+}
+
+.skip a:focus {
+  top: 0;
+  background: var(--mb-purple);
+  color: #fff;
+  padding: 10px;
+}
+
+.ir {
+  display: inline-block;
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+
+/* ==========================================================================
+   TOP BANNER & HEADER
+   ========================================================================== */
+#header.main-header {
+  position: relative;
+  background-color: var(--mb-bg-header);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  z-index: 500;
+}
+
+/* 상단 팝업 배너 */
+.popup-banner {
+  background-color: #0b0a0e;
+  position: relative;
+  width: 100%;
+  border-bottom: 1px solid #1f1d24;
+}
+
+.popup-img > a {
+  display: flex;
+  justify-content: center;
+}
+
+.popup-img img {
+  max-width: 100%;
+  height: auto;
+}
+
+.popup-button {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+
+.popup-button button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  transition: opacity 0.2s ease;
+}
+
+.popup-button button:hover {
+  opacity: 1;
+}
+
+/* 로고 중앙 배치 */
+#header .ci {
+  text-align: center;
+  padding: 20px 0 10px;
+}
+
+#header .ci img {
+  height: 38px;
+  display: inline-block;
+}
+
+/* 상단 유저 툴바 */
+.util-area {
+  width: var(--mb-width);
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 12px;
+  color: var(--mb-text-gray);
+  padding: 6px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.util-area .left-link, .util-area .right-link {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.util-area a {
+  color: #888888;
+  transition: color 0.2s ease;
+}
+
+.util-area a:hover {
+  color: var(--mb-text-white);
+}
+
+.util-area .quick-booking-btn {
+  color: var(--mb-cyan);
+  font-weight: 700;
+}
+
+/* 우측 퀵 링크 (사이트맵 / 검색 / 시간표 / 나의 메가박스) */
+.link-area {
+  position: absolute;
+  top: 25px;
+  right: calc((100% - var(--mb-width)) / 2);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.link-area a {
+  display: flex;
+  align-items: center;
+  opacity: 0.85;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.link-area a:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.link-area img {
+  width: 20px;
+  height: 20px;
+}
+
+/* GNB Navigation */
+#gnb {
+  width: var(--mb-width);
+  margin: 0 auto;
+  position: relative;
+}
+
+.gnb-depth1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 65px;
+}
+
+.gnb-depth1 > li {
+  position: relative;
+  padding: 12px 0;
+}
+
+.gnb-depth1 > li > a {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--mb-text-white);
+  display: block;
+  padding: 6px 0;
+  transition: color 0.2s ease;
+}
+
+.gnb-depth1 > li > a:hover {
+  color: var(--mb-cyan);
+}
+
+/* GNB 2뎁스 서브메뉴 펼침 */
+.gnb-depth2 {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 180px;
+  background-color: var(--mb-bg-subnav);
+  border: 1px solid #2a2733;
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.8);
+  padding: 12px 0;
+  z-index: 1000;
+}
+
+.gnb-depth1 > li:hover .gnb-depth2 {
+  display: block;
+}
+
+.gnb-depth2 ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.gnb-depth2 a {
+  font-size: 13px;
+  color: #cccccc;
+  padding: 8px 20px;
+  display: block;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.gnb-depth2 a:hover {
+  background-color: rgba(0, 162, 184, 0.15);
+  color: var(--mb-cyan);
+}
+
+/* 사이트맵 & 검색 모달 레이어 */
+.header-layer {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  background-color: #121016;
+  border-bottom: 2px solid var(--mb-cyan);
+  padding: 30px 0;
+  z-index: 2000;
+}
+
+.header-layer.on {
+  display: block;
+}
+
+.header-layer .wrap {
+  width: var(--mb-width);
+  margin: 0 auto;
+  position: relative;
+}
+
+.sitemap-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+
+.sitemap-grid .tit-depth {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--mb-cyan);
+  border-bottom: 1px solid #2b2736;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+
+.sitemap-grid .list-depth a {
+  font-size: 13px;
+  color: #aaa;
+  display: block;
+  padding: 4px 0;
+}
+
+.sitemap-grid .list-depth a:hover {
+  color: #fff;
+}
+
+.btn-close-sitemap, .btn-close-search {
+  position: absolute;
+  top: -10px;
+  right: 0;
+  background: transparent;
+  border: none;
+  color: #aaa;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+.search-box {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid var(--mb-cyan);
+  padding-bottom: 10px;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.search-box input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  color: #fff;
+}
+
+.btn-search-go {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+
+/* ==========================================================================
+   SECTION 01 : BOX OFFICE
+   ========================================================================== */
+.main-movie {
+  padding: 50px 0 40px;
+  position: relative;
+  background: radial-gradient(circle at top center, #1e192a 0%, var(--mb-bg-dark) 75%);
+}
+
+.cont-area {
+  width: var(--mb-width);
+  margin: 0 auto;
+  position: relative;
+}
+
+.tab-sorting {
+  display: flex;
+  gap: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+.tab-sorting button {
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  font-weight: 700;
+  color: #777777;
+  cursor: pointer;
+  padding-bottom: 5px;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.tab-sorting button.on, .tab-sorting button:hover {
+  color: var(--mb-text-white);
+  border-bottom-color: var(--mb-cyan);
+}
+
+.more-movie {
+  position: absolute;
+  top: 5px;
+  right: 0;
+  font-size: 13px;
+  color: #888888;
+  transition: color 0.2s ease;
+}
+
+.more-movie:hover {
+  color: var(--mb-cyan);
+}
+
+.main-movie-list .list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.movie-item {
+  background-color: var(--mb-bg-card);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.movie-item:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0, 162, 184, 0.25);
+}
+
+.movie-list-info {
+  position: relative;
+  display: block;
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  overflow: hidden;
+}
+
+.movie-list-info .poster {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.movie-item:hover .poster {
+  transform: scale(1.06);
+}
+
+.rank {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 26px;
+  font-weight: 900;
+  font-style: italic;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.65);
+  width: 36px;
+  height: 36px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  z-index: 5;
+}
+
+.age-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 6px;
+  border-radius: 4px;
+  color: #fff;
+  z-index: 5;
+}
+
+.age-all { background-color: #2e7d32; }
+.age-12  { background-color: #e65100; }
+.age-15  { background-color: #dd2c00; }
+.age-19  { background-color: #c62828; }
+
+/* Format Badges */
+.screen-type2 {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  display: flex;
+  gap: 4px;
+  z-index: 5;
+}
+
+.screen-type2 span {
+  font-size: 10px;
+  font-weight: 900;
+  color: #fff;
+  background: rgba(53, 31, 103, 0.8);
+  padding: 2px 6px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Hover Summary Wrap */
+.movie-list-info .wrap {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(18, 16, 22, 0.92);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 10;
+  backdrop-filter: blur(4px);
+}
+
+.movie-item:hover .wrap {
+  opacity: 1;
+}
+
+.movie-list-info .summary {
+  font-size: 13px;
+  color: #cccccc;
+  line-height: 1.6;
+  display: -webkit-box;
+  -webkit-line-clamp: 6;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.score .preview {
+  font-size: 13px;
+  color: #888;
+  border-top: 1px solid #332d3f;
+  padding-top: 10px;
+}
+
+.score .number {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffb703;
+}
+
+/* Button Util */
+.btn-util {
+  padding: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--mb-bg-card);
+}
+
+.btn-like {
+  background: transparent;
+  border: 1px solid #363142;
+  color: #aaa;
+  padding: 6px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-like:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+.btn-util .case a.button.gblue {
+  background-color: rgba(0, 162, 184, 0.15);
+  color: var(--mb-cyan);
+  border: 1px solid var(--mb-cyan);
+  padding: 6px 16px;
+  border-radius: 6px;
+  font-size: 13px;
+  font-weight: 700;
+  display: inline-block;
+  transition: all 0.2s ease;
+}
+
+.btn-util .case a.button.gblue:hover {
+  background-color: var(--mb-cyan);
+  color: #ffffff;
+}
+
+/* 하단 검색 & 링크 바 */
+.search-link {
+  margin-top: 35px;
+  background-color: #1a1722;
+  border: 1px solid #2a2636;
+  border-radius: 12px;
+  padding: 16px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.search-link .search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-link .input-text {
+  background-color: #121017;
+  border: 1px solid #332f42;
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  width: 250px;
+  outline: none;
+}
+
+.search-link .btn {
+  background-color: var(--mb-cyan);
+  color: #fff;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.search-link .cell a {
+  font-size: 14px;
+  color: #ccc;
+  transition: color 0.2s ease;
+}
+
+.search-link .cell a:hover {
+  color: var(--mb-cyan);
+}
+
+
+/* ==========================================================================
+   QUICK BOOKING MODAL
+   ========================================================================== */
+.quick-booking-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.qb-col {
+  background-color: #121017;
+  border: 1px solid #2a2636;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.qb-col h4 {
+  font-size: 14px;
+  color: var(--mb-cyan);
+  margin-bottom: 10px;
+  border-bottom: 1px solid #2a2636;
+  padding-bottom: 6px;
+}
+
+.qb-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.qb-item {
+  padding: 8px;
+  font-size: 13px;
+  color: #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.qb-item:hover, .qb-item.selected {
+  background-color: var(--mb-purple);
+  color: #fff;
+}
+
+
+/* ==========================================================================
+   SECTION 02 & 03 : BENEFIT & CURATION
+   ========================================================================== */
+.main-benefit, .main-curation, .main-info {
+  padding: 50px 0;
+  width: var(--mb-width);
+  margin: 0 auto;
+}
+
+.tit-util {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #2a2636;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+}
+
+.tit-util .tit {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.benefit-card {
+  background-color: #1a1722;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #2a2636;
+}
+
+.benefit-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.benefit-card .info {
+  padding: 16px;
+}
+
+.benefit-card .tag {
+  font-size: 11px;
+  color: var(--mb-cyan);
+  background: rgba(0, 162, 184, 0.1);
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+.benefit-card h4 {
+  font-size: 16px;
+  margin-top: 8px;
+}
+
+.benefit-card .date {
+  font-size: 12px;
+  color: #777;
+  margin-top: 4px;
+}
+
+/* 큐레이션 영역 */
+.curation-area {
+  background-color: #181520;
+  border-radius: 12px;
+  padding: 24px;
+  border: 1px solid #2a2636;
+}
+
+.curr-img {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.curr-img .img {
+  width: 200px;
+  height: 280px;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.curr-img .img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.curr-img .info {
+  flex: 1;
+}
+
+.curr-img .info .txt {
+  color: var(--mb-cyan);
+  font-weight: 700;
+}
+
+.curr-img .info .tit {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.curr-img .info .summary {
+  color: #aaa;
+  line-height: 1.7;
+}
+
+/* 특별관 서브 리스트 */
+.special-cinema-list {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.special-item {
+  background-color: #1a1722;
+  border: 1px solid #2a2636;
+  padding: 14px 24px;
+  border-radius: 8px;
+  font-weight: 700;
+  color: #ccc;
+  transition: all 0.2s ease;
+}
+
+.special-item:hover {
+  background-color: var(--mb-cyan);
+  color: #fff;
+  border-color: var(--mb-cyan);
+}
+
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+#footer {
+  background-color: #09080c;
+  border-top: 1px solid #1f1c29;
+  padding: 40px 0 60px;
+  margin-top: 60px;
+  font-size: 13px;
+  color: #777;
+}
+
+#footer .inner-wrap {
+  width: var(--mb-width);
+  margin: 0 auto;
+}
+
+.footer-top {
+  border-bottom: 1px solid #1f1c29;
+  padding-bottom: 20px;
+  margin-bottom: 25px;
+}
+
+.footer-top .fnb {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.footer-top a {
+  color: #888;
+  transition: color 0.2s ease;
+}
+
+.footer-top a:hover {
+  color: #fff;
+}
+
+.footer-top .privacy a {
+  color: #fff;
+  font-weight: 700;
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.footer-bottom .ci {
+  font-size: 18px;
+  font-weight: 900;
+  color: #aaa;
+}
+
+.footer-info p {
+  margin-top: 2px;
+}
+
+.footer-info .copy {
+  margin-top: 10px;
+  color: #555;
+}
