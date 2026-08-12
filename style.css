@@ -172,11 +172,54 @@ header {
   color: aliceblue;
 }
 
+.boxoffice{
+  display: flex;
+}
+.boxoffice-button{
+  display: flex;
+  justify-content: center;
+  color: #fff;
+}
+.boxoffice1{
+  display: flex;
+  justify-content: center;
+}
+.boxoffice>a{
+  display: flex;
+  justify-items: flex-end;
+}
+
+
 /* 영화 순위 */
 .movie-list{
   display: flex;
   justify-content: center;
 }
+/* 무비 안에 있는 버튼 */
+.mv-btn{
+  padding-top: 10px;
+  display: flex;
+  color: #fff;
+  gap: 6px;
+}
+/* 하트버튼 */
+.good{
+  height: 36px;
+  width: 80px;
+  border: 1px solid #fff;
+  border-radius: 4px;
+  background-color: #000 ;
+  opacity: 40%;
+  
+}
+/* 예매 버튼 */
+.Advance-Booking{
+  border-radius:4px;
+  height: 36px;
+  width: 160px;
+  background-color: #037B94;
+}
+
 .list{
   display: flex;
   justify-items: center;
