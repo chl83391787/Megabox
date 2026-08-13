@@ -190,6 +190,18 @@ header {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
 /* 영화 순위 */
 .movie-list{
   display: flex;
@@ -204,6 +216,8 @@ header {
 }
 /* 하트버튼 */
 .good{
+  display: flex;
+  justify-content: flex-start;
   height: 36px;
   width: 80px;
   border: 1px solid #fff;
@@ -214,6 +228,7 @@ header {
 }
 /* 예매 버튼 */
 .Advance-Booking{
+  display: flex; justify-content: center; 
   border-radius:4px;
   height: 36px;
   width: 160px;
@@ -225,4 +240,21 @@ header {
   justify-items: center;
   gap: 40px;
   color: #fff;
+}
+.search-link{
+  display: flex;
+  justify-content: center;
+}
+.cell {
+  color:#fff;
+  width: 1100px;
+  display: flex;
+  justify-content: center;
+  padding: 71px 120px 71px 12px;
+  gap: 173px;
+
+}
+.cell a {
+ display: flex;
+ justify-content: space-between;
 }
