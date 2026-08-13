@@ -191,21 +191,11 @@ header {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 /* 영화 순위 */
 .movie-list{
   display: flex;
   justify-content: center;
+  padding: 20px;
 }
 /* 무비 안에 있는 버튼 */
 .mv-btn{
