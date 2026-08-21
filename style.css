@@ -231,6 +231,21 @@ header {
   gap: 40px;
   color: #fff;
 }
+
+.moviebox{
+  color: #fff;
+}
+.Office{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ color: #fff;
+}
+
+
+
+
+
 .search-link{
   display: flex;
   justify-content: center;
@@ -248,3 +263,4 @@ header {
  display: flex;
  justify-content: space-between;
 }
+
