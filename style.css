@@ -262,11 +262,31 @@ header {
   gap: 173px;
 
 }
+
+
+
+
+
+
+
+
+.inpou-text{
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #777;
+  outline: none;
+}
+.cell{
+
+}
 .cell a {
  display: flex;
  justify-content: space-between;
-}
 
+}
+.mvsearch{
+  display: flex;
+}
 .tit-util{
   color: #000;
   width: 100%;
